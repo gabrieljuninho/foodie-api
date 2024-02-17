@@ -1,0 +1,31 @@
+{
+  "name": "foodie-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsc -w",
+    "dev": "npx nodemon",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gabrieljuninho/foodie-api.git"
+  },
+  "author": "Gabriel Juninho Paulista",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrieljuninho/foodie-api/issues"
+  },
+  "homepage": "https://github.com/gabrieljuninho/foodie-api#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}
