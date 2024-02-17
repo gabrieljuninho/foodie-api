@@ -1,5 +1,9 @@
-import express, { Application, Request, Response } from "express";
+import express, { Application } from "express";
 import dotenv from "dotenv";
+
+import { routes } from "./routes";
+
+import { logger } from "./utils/logger";
 
 dotenv.config();
 
@@ -11,10 +15,8 @@ if (!process.env.PORT) {
 
 const PORT: Number = Number(process.env.PORT);
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, World!");
-});
+routes(app);
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  logger.info(`Server is running on port ${PORT}`);
 });
