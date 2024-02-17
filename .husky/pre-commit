@@ -1,0 +1,17 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Styling, testting, and bulding your project before committing"
+
+# Check tsconfig.json
+npm run check-types || (
+  echo "Failed type check. Make the changes required above, add changes and try to commit again.";
+  false;
+)
+
+npm run build || (
+  echo "Failed to build. Make the changes required above, add changes and try to commit again.";
+  false;
+)
+
+echo "Success for pre-commit, ready to commit."
